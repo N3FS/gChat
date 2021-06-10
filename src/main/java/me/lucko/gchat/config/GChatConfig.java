@@ -96,7 +96,7 @@ public class GChatConfig {
         }
 
         List<ChatFormat> formatsList = new ArrayList<>(formats.values());
-        formatsList.sort(Comparator.comparingInt(ChatFormat::getPriority));
+        formatsList.sort(Comparator.comparingInt(ChatFormat::getPriority).reversed());
 
         this.formats = ImmutableList.copyOf(formatsList);
 
